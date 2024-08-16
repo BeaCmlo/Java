@@ -31,8 +31,16 @@ private void SadessHill(){
     }
 }
 private void Verdict(){
-
-    
-   
-    return message;
+    String message;
+    if(this.StressLevel > 7 && HapinessLevel){    
+        message = "You aren´t okay, dude. Get a theraphist urgently.";
+    }
+    else if (!HapinessLevel) {
+        message =   "Are you sure that this is cool? Get off of this job.";
+    }
+    else{
+        message = "Stay safe!!!";
+    }
+    System.out.println(message);
+    }
 }
