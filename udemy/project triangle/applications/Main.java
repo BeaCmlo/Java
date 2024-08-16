@@ -2,7 +2,7 @@ package udemy.project.triangle.applications;
 import java.util.Locale;
 import java.util.Scanner;
 
-import Udemy.ProjectTriangle.entities.Triangle;
+import udemy.project.triangle.entities.triangle;
 
 public class Main{
     public static void main(String[] args){
