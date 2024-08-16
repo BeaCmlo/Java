@@ -1,5 +1,5 @@
 package Projects.daily.applications;
 
-public class main {
-    
+public class Program {
+        
 }
