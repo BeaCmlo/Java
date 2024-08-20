@@ -1,10 +1,10 @@
-package udemy.project.triangle.applications;
+package udemy.triangle.applications;
 import java.util.Locale;
 import java.util.Scanner;
 
-import udemy.project.triangle.entities.triangle;
+import udemy.triangle.entities.Triangle;
 
-public class Main{
+public class Program{
     public static void main(String[] args){
 
     Locale.setDefault(Locale.US);

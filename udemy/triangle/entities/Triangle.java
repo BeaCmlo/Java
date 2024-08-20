@@ -1,4 +1,4 @@
-package udemy.project.triangle.entities;
+package udemy.triangle.entities;
 
 public class Triangle{
 
