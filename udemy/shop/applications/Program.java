@@ -20,9 +20,28 @@ public class Program{
        System.out.print("Quantity in stock: ");
        product.quantity = sc.nextInt();
 
+       System.out.println();
+       System.out.println("Product data: " + product);
+       System.out.println();
+
+       System.out.print("Enter the number of products to be added in stock: ");
+       
+       int quantityAdd = sc.nextInt();
+
+       product.addProducts(quantityAdd);
+
+       System.out.println();
+       System.out.println("Updaded data: " + product);
+       System.out.println();
+
+       System.out.print("Enter the number of products to be remove in stock: ");
        
 
-       System.out.println("Product data: " + product);
+       int quantityRemove = sc.nextInt();
+       product.removeProducts(quantityRemove);
+       
+       System.out.println();
+       System.out.print("Updaded data: " + product);
 
        sc.close();
     }
