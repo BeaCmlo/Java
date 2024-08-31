@@ -1,33 +1,36 @@
 package udemy.rectangle.entities;
 
-public class rectangle {
+public class Rectangle {
     
     public double height;
     public double widht;
 
     
-    public String perimether(double height, double widht){
+    public double perimether(double height, double widht){
         
         double perimeter = (2*height) + (2*widht);
 
-        return "PERIMETHER = "
-        + String.format("%.2f", perimeter);
+        return perimeter;
     }
 
-    public String area(double height, double widht){
+    public double area(double height, double widht){
 
         double area = height * widht;
         
-        return "AREA = "
-        + String.format("%.2f", area);
+        return area;
     }
 
-    public String diagonal(double height, double widht){
+    public double diagonal(double height, double widht){
         
         double diagonal = Math.sqrt((Math.pow(height, 2)) + (Math.pow(widht, 2)));
 
-        return "DIAGONAL = "
-        + String.format("%.2f", diagonal);
+        return diagonal;
+    }
+    public String toString(){
+        return "Perimeter = " 
+        + String.format("%.2f", perimether(height, widht))
+        + "\nArea = " +  String.format("%.2f", area(height, widht)) 
+        + "\nDiagonal = " +  String.format("%.2f", diagonal(height, widht));
     }
 
 }
