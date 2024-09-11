@@ -2,25 +2,26 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StaticMethods {
-    static String phase(){
-        return "That´s a phase that a can use in main without needing an Object";
+
+    static String phase() {
+        return "That´s a phase that I can use in main without needing an Object";
     }
-    static ArrayList ItsEven(ArrayList<Integer> nums, int nums_quantity){
-        ArrayList<Integer> colletionsEven = new ArrayList<>();
+
+    static ArrayList<Integer> getEvenNumbers(ArrayList<Integer> nums, int nums_quantity) {
+        ArrayList<Integer> collectionsEven = new ArrayList<>();
         int count = 0;
 
-            for (int i = nums.size() - 1; i >= 0; i--) {
-                if (nums.get(i) % 2 == 0) {
-                    colletionsEven.add(nums.get(i));
-                    ++count;
-                }
-                if(count == nums_quantity){
-                    break;
-                }
-
+        for (int i = nums.size() - 1; i >= 0; i--) {
+            if (nums.get(i) % 2 == 0) {
+                collectionsEven.add(nums.get(i));
+                ++count;
             }
-        return colletionsEven;
+            if (count == nums_quantity) {
+                break;
+            }
         }
+        return collectionsEven;
+    }
 
     public static void main(String[] args) {
 
@@ -31,7 +32,6 @@ public class StaticMethods {
         System.out.println("Enter the numbers you wish to see the last even numbers. Type 'X' to finish");
 
         ArrayList<Integer> inputNums = new ArrayList<>();
-
 
         while (true) {
             String input = sc.nextLine();
@@ -49,19 +49,35 @@ public class StaticMethods {
         System.out.println("Now, enter how many numbers you wish to see: ");
         int howManyNums = sc.nextInt();
 
-        ArrayList<Integer> finalNums = ItsEven(inputNums, howManyNums);
+        ArrayList<Integer> finalNums = getEvenNumbers(inputNums, howManyNums);
 
-        System.out.print("You got it your last even numbers:\n[");
-        for (int i = 0; i < finalNums.size(); ++i) {
-            System.out.print(finalNums.get(i) + "");
-            if (i != finalNums.size() - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");
 
+        ResultPrinter printer = new ResultPrinter(finalNums);
+        System.out.println(printer);
 
         sc.close();
     }
+}
 
+
+class ResultPrinter {
+    private ArrayList<Integer> numbers;
+
+    public ResultPrinter(ArrayList<Integer> numbers) {
+        this.numbers = numbers;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("You got it your last even numbers:\n[");
+        for (int i = 0; i < numbers.size(); ++i) {
+            sb.append(numbers.get(i));
+            if (i != numbers.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }
