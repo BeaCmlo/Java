@@ -8,7 +8,7 @@ public class Student {
     private double complement;
 
     public boolean avarege() {
-        avarage = (((av1 * 30) + (av2 * 35) + (av3*35))/100);
+        avarage = ((av1 * 30) + (av2 * 35) + (av3*35)/100);
         complement = (60 - avarage);
         if(avarage > 60){
             pass = true;
