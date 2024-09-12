@@ -5,10 +5,17 @@ public class Product {
     public double price;
     public int quantity;
 
+    public Product() {}
+
     public Product(String name, double price, int quantity) {
         this.name = name; // Referência "this" ao atrinuto do objeto
         this.price = price; // Referência "this" ao atrinuto do objeto
         this.quantity = quantity; // Referência "this" ao atrinuto do objeto
+    }
+
+    public Product(String name, double price) { // Sobrecarga
+        this.name = name;
+        this.price = price;
     }
 
 
