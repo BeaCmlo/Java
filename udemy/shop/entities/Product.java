@@ -1,23 +1,40 @@
 package udemy.shop.entities;
 
 public class Product {
-    public String name;
-    public double price;
-    public int quantity;
+    private String name;
+    private double price;
+    private int quantity;
 
     public Product() {}
 
     public Product(String name, double price, int quantity) {
-        this.name = name; // Referência "this" ao atrinuto do objeto
-        this.price = price; // Referência "this" ao atrinuto do objeto
-        this.quantity = quantity; // Referência "this" ao atrinuto do objeto
+        this.name = name; // Reference "this" to the object attribute
+        this.price = price; // Reference "this" to the object attribute
+        this.quantity = quantity; // Reference "this" to the object attribute
     }
 
-    public Product(String name, double price) { // Sobrecarga
+    public Product(String name, double price) { // Overload
         this.name = name;
         this.price = price;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    public int getQuantity() {
+        return quantity;
+    }
 
     public double totalValueInStock(){
 
