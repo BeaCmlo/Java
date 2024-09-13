@@ -5,18 +5,18 @@ public class Product {
     private double price;
     private int quantity;
 
-    public Product() {}
 
     public Product(String name, double price, int quantity) {
-        this.name = name; // Reference "this" to the object attribute
-        this.price = price; // Reference "this" to the object attribute
-        this.quantity = quantity; // Reference "this" to the object attribute
+       this.name = name; // Reference "this" to the object attribute
+       this.price = price; // Reference "this" to the object attribute
+       this.quantity = quantity; // Reference "this" to the object attribute
     }
 
-    public Product(String name, double price) { // Overload
-        this.name = name;
-        this.price = price;
+   /* public Product(String name, double price) { // Overload
+     *   this.name = name;
+     *   this.price = price;
     }
+    */
 
     public void setName(String name) {
         this.name = name;
@@ -29,6 +29,11 @@ public class Product {
     public double getPrice() {
         return price;
     }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
@@ -37,7 +42,6 @@ public class Product {
     }
 
     public double totalValueInStock(){
-
         return price * quantity;
     }
 
