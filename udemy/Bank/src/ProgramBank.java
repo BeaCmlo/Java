@@ -15,17 +15,17 @@ public class ProgramBank {
 
         System.out.print("Is there an initial deposit? (y/n) ");
 
-        BankAccount bankAccount;
+        BankAccount bankAccount; // Inicialize constructor
 
         char response = sc.next().charAt(0);
         if (response == 'y') {
             System.out.print("Enter initial deposit amount: ");
             double deposit = sc.nextDouble();
-            bankAccount = new BankAccount(account, holder, deposit);
+            bankAccount = new BankAccount(account, holder, deposit); // Pass the paramethers (as like deposit)
             bankAccount.Deposit(deposit);
         }
         else if (response == 'n') {
-            bankAccount = new BankAccount(account, holder);
+            bankAccount = new BankAccount(account, holder); // Pass the paramethers for another constructor
 
         }else{ System.out.println("Invalid input");
         sc.close();
