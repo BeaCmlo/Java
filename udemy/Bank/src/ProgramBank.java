@@ -27,7 +27,7 @@ public class ProgramBank {
         else if (response == 'n') {
             bankAccount = new BankAccount(account, holder); // Pass the paramethers for another constructor
 
-        }else{ System.out.println("Invalid input");
+        }else{ System.out.println("Invalid input"); // If input is different from 'y' and 'n'
         sc.close();
         return;
         }
