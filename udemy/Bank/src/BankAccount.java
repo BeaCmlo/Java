@@ -1,4 +1,4 @@
-public class BankAccount {
+public class BankAccount { // Private elements
     private int accountNumber;
     private String accountTitulare;
     private double deposit;
@@ -14,19 +14,18 @@ public class BankAccount {
         this.accountTitulare = accountTitulare;
         this.deposit = deposit;
     }
-    public double Deposit(double amount) {
+    public double Deposit(double amount) { // Function for Deposit
         return this.balance += amount;
     }
 
-    public double Withdraw(double amount) {
+    public double Withdraw(double amount) { // Function for Withdraw
         if (this.balance >= amount + 5) {
             this.balance -= amount + 5;
         } else {
-            System.out.println("Insufficient funds");
+            System.out.println("Insufficient funds"); // If it´s not possible do the withdraw
         }
         return this.balance;
     }
-
 
     @Override
     public String toString() {
