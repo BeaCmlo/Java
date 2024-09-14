@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Program {
-    public class Bakery{
+    public static class Bakery{
         private String name;
         private int numsOfBreads;
         private int numsOfDrinks;
@@ -14,10 +14,12 @@ public class Program {
         private ArrayList<String> drinks;
         private Map<Double, String> menu;
 
-        public Bakery(String name, ArrayList<String> breads, ArrayList<String> drinks) {
+        public Bakery(String name, int numsOfBreads, int numsOfDrinks, ArrayList<String> breads, ArrayList<String> drinks) {
             this.name = name;
             this.breads = breads;
             this.drinks = drinks;
+            this.numsOfBreads = numsOfBreads;
+            this.numsOfDrinks = numsOfDrinks;
         }
 
         @Override
@@ -30,6 +32,7 @@ public class Program {
                     '}';
         }
     }
+
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
@@ -46,13 +49,25 @@ public class Program {
         for (int i = 0; i < numsOfBreads; i++) {
             breads.add(sc.nextLine());
         }
-        for (int i = 0; i < numsOfBreads; i++) {
+        /*for (int i = 0; i < numsOfBreads; i++) {
             System.out.print(breads.get(i));
             if (i != numsOfBreads - 1) {
                 System.out.print(", ");
             }
+        }*/
+        System.out.print("Enter the number of drinks: ");
+        int numsOfDrinks = sc.nextInt();
+        sc.nextLine();
+
+        ArrayList<String> drinks = new ArrayList<>();
+        System.out.println("Enter the drinks: ");
+        for (int i = 0; i < numsOfDrinks; i++) {
+            drinks.add(sc.nextLine());
         }
-    // continued
+        Bakery bakery = new Bakery(name, numsOfBreads, numsOfDrinks, breads, drinks);
+
+
+        // continued
     }
 }
 
