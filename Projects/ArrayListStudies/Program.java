@@ -1,9 +1,6 @@
 package Projects.ArrayListStudies;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Program {
     public static class Bakery{
@@ -14,13 +11,15 @@ public class Program {
         private ArrayList<String> drinks;
         private Map<Double, String> menu;
 
-        public Bakery(String name, int numsOfBreads, int numsOfDrinks, ArrayList<String> breads, ArrayList<String> drinks) {
+        public Bakery(String name, int numsOfBreads, int numsOfDrinks, ArrayList<String> breads, ArrayList<String> drinks, Map<Double, String> menu) {
             this.name = name;
             this.breads = breads;
             this.drinks = drinks;
             this.numsOfBreads = numsOfBreads;
             this.numsOfDrinks = numsOfDrinks;
+            this.menu = menu;
         }
+
 
         @Override
         public String toString() {
@@ -64,7 +63,8 @@ public class Program {
         for (int i = 0; i < numsOfDrinks; i++) {
             drinks.add(sc.nextLine());
         }
-        Bakery bakery = new Bakery(name, numsOfBreads, numsOfDrinks, breads, drinks);
+        Map<Double, String> menu = new HashMap<>();
+        Bakery bakery = new Bakery(name, numsOfBreads, numsOfDrinks, breads, drinks, menu);
 
 
         // continued
