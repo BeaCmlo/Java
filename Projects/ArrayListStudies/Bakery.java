@@ -25,14 +25,7 @@ public class Bakery{
         this.priceDrinks = new HashMap<>();
     }
 
-    public Map<String, Double> getPriceBreads() {
-
-        return priceBreads;
-    }
-    public Map<String, Double> getPriceDrinks() {
-        return priceDrinks;
-    }
-    public Map<Map<String, Double>, Map<String, Double>> getMenu() {
+    public Map<Map<String, Double>, Map<String, Double>> createMenu(Map<String, Double> priceBreads, Map<String, Double> priceDrinks) {
 
         return menu;
     }
