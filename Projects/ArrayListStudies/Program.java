@@ -9,15 +9,31 @@ public class Program {
         private int numsOfDrinks;
         private ArrayList<String> breads;
         private ArrayList<String> drinks;
-        private Map<Double, String> menu;
+        private Map<String, Double> priceBreads;
+        private Map<String, Double> priceDrinks;
+        private Map<Map<String,Double>, Map<String,Double>> priceBreadsAndDrinks;
 
-        public Bakery(String name, int numsOfBreads, int numsOfDrinks, ArrayList<String> breads, ArrayList<String> drinks, Map<Double, String> menu) {
+
+        public Bakery(String name, int numsOfBreads, int numsOfDrinks, ArrayList<String> breads, ArrayList<String> drinks) {
             this.name = name;
             this.breads = breads;
             this.drinks = drinks;
             this.numsOfBreads = numsOfBreads;
             this.numsOfDrinks = numsOfDrinks;
-            this.menu = menu;
+            this.priceBreads = new HashMap<>();
+            this.priceDrinks = new HashMap<>();
+        }
+
+        public Map<String, Double> getPriceBreads() {
+
+            return priceBreads;
+        }
+        public Map<String, Double> getPriceDrinks() {
+            return priceDrinks;
+        }
+        public Map<Map<String, Double>, Map<String, Double>> getPriceBreadsAndDrinks() {
+
+            return priceBreadsAndDrinks;
         }
 
 
@@ -27,7 +43,7 @@ public class Program {
                     "name='" + name + '\'' +
                     ", breads=" + breads +
                     ", drinks=" + drinks +
-                    ", menu=" + menu +
+                    ", menu=" +
                     '}';
         }
     }
@@ -63,9 +79,20 @@ public class Program {
         for (int i = 0; i < numsOfDrinks; i++) {
             drinks.add(sc.nextLine());
         }
-        Map<Double, String> menu = new HashMap<>();
-        Bakery bakery = new Bakery(name, numsOfBreads, numsOfDrinks, breads, drinks, menu);
+        Bakery bakery = new Bakery(name, numsOfBreads, numsOfDrinks, breads, drinks);
 
+        Map<Double, String> priceBreads = new HashMap<>();
+        for (String bread : breads){
+            System.out.printf("Enter the price of the bread %s ", bread);
+            double price = sc.nextDouble();
+            priceBreads.put(price, bread);
+        }
+        Map<Double, String> priceDrinks = new HashMap<>();
+        for(String drink : drinks){
+            System.out.printf("Enter the price of the drink %s ", drink);
+            double price = sc.nextDouble();
+            priceDrinks.put(price, drink);
+        }
 
         // continued
     }
