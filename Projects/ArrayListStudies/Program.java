@@ -36,17 +36,20 @@ public class Program {
         }
         Bakery bakery = new Bakery(name, numsOfBreads, numsOfDrinks, breads, drinks);
 
-        Map<Double, String> priceBreads = new HashMap<>();
+        Map<String, Double> priceBreads = new HashMap<>();
         for (String bread : breads){
             System.out.printf("Enter the price of the bread %s ", bread);
             double price = sc.nextDouble();
-            priceBreads.put(price, bread);
+            priceBreads.put(bread, price);
         }
-        Map<Double, String> priceDrinks = new HashMap<>();
+        Map<String, Double> priceDrinks = new HashMap<>();
         for(String drink : drinks){
             System.out.printf("Enter the price of the drink %s ", drink);
             double price = sc.nextDouble();
-            priceDrinks.put(price, drink);
+            priceDrinks.put(drink, price);
+        }
+        for (Map.Entry<String, Double> entry : priceBreads.entrySet()){
+            System.out.printf("%.2f ", entry.getValue());
         }
 
         // continued
