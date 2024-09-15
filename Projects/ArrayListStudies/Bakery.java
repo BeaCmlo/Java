@@ -12,7 +12,7 @@ public class Bakery{
     private ArrayList<String> drinks;
     private Map<String, Double> priceBreads;
     private Map<String, Double> priceDrinks;
-    private Map<Map<String,Double>, Map<String,Double>> priceBreadsAndDrinks;
+    private Map<Map<String,Double>, Map<String,Double>> menu;
 
 
     public Bakery(String name, int numsOfBreads, int numsOfDrinks, ArrayList<String> breads, ArrayList<String> drinks) {
@@ -32,9 +32,9 @@ public class Bakery{
     public Map<String, Double> getPriceDrinks() {
         return priceDrinks;
     }
-    public Map<Map<String, Double>, Map<String, Double>> getPriceBreadsAndDrinks() {
+    public Map<Map<String, Double>, Map<String, Double>> getMenu() {
 
-        return priceBreadsAndDrinks;
+        return menu;
     }
 
 
