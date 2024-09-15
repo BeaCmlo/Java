@@ -48,7 +48,7 @@ public class Program {
             double price = sc.nextDouble();
             priceDrinks.put(drink, price);
         }
-        Map<String, Double> priceBreadsAndDrinks = new HashMap<>();
+        Map<String, Double> menu = new HashMap<>();
         for (Map.Entry<String, Double> entry : priceBreads.entrySet()){
             System.out.printf("Bread: %s", entry.getKey());
             System.out.printf(" - R$ %.2f ", entry.getValue());
