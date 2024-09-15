@@ -53,7 +53,7 @@ public class Program {
             System.out.printf("Bread: %s", entry.getKey());
             System.out.printf(" - R$ %.2f ", entry.getValue());
             System.out.println();
-        }
+        } // comment
 
         // continued
     }
