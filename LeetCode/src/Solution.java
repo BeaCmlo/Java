@@ -3,23 +3,22 @@ import java.util.HashMap;
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>(); // CRIA UM HASHMAP
 
 
         for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
+            int complement = target - nums[i]; // CALCULA O COMPLEMENTO DO VALOR
 
 
-            if (map.containsKey(complement)) {
+            if (map.containsKey(complement)) { // SE A CHAVE O COMPLEMENTO DE N[I] JÁ APARECEU, ISSO QUE DIZER QUE ENCONTRAMOS OS ÍNDICES QUE SATISFAZEM TARGET
 
-                return new int[] { map.get(complement), i };
+                return new int[] { map.get(complement), i }; // RETORNA OS ÍNDICES EM UM ARRAY DE DOIS ELEMENTOS
             }
 
-            map.put(nums[i], i);
+            map.put(nums[i], i); // CHAVE E VALOR
         }
 
-
-        throw new IllegalArgumentException("No two sum solution");
+        throw new IllegalArgumentException("No two sum solution"); // DEPOIS DE TESTAR TODOS OS ELEMENTOS DO ARRAY NUMS, NÃO FORAM ENCONTRADOS NUMEROS QUE SATISFAZEM O TARGET
     }
 
     public static void main(String[] args) {
