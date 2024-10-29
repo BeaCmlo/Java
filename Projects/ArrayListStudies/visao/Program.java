@@ -1,4 +1,6 @@
-package Projects.ArrayListStudies;
+package Projects.ArrayListStudies.visao;
+
+import Projects.ArrayListStudies.modelo.Bakery;
 
 import java.util.*;
 
