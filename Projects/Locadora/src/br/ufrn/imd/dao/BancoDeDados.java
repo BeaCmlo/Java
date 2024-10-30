@@ -37,9 +37,8 @@ public class BancoDeDados {
                 System.out.println("Nome: " + produto.getNome());
                 System.out.println("Preço: R$ " + String.format("%.2f", produto.getPreco()));
                 DvD dvD = (DvD) produto;
-                System.out.println(dvD.getDiretor());
-                System.out.println(dvD.getGenero());
-                System.out.println();
+                System.out.println("Diretor: " + dvD.getDiretor());
+                System.out.println("Genero: " + dvD.getGenero());
                 System.out.println("---------------------------------------");
             }
         }
