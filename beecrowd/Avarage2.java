@@ -21,5 +21,7 @@ public class Avarage2{
         System.out.printf("MEDIA = %.1f%n", MEDIA);
 
         sc.close();
+
+        // pequeno comentário
     }
 }
