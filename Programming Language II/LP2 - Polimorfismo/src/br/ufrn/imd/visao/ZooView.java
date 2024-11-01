@@ -1,7 +1,8 @@
 package br.ufrn.imd.visao;
 
-import br.ufrn.imd.modelo.Girafa;
 import br.ufrn.imd.dao.BancoDeDados;
+import br.ufrn.imd.modelo.Girafa;
+
 public class ZooView {
 
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class ZooView {
 
         bancoDeDados.adionarAnimal(girafa1);
         bancoDeDados.exibirAnimaisCadastrados();
-        bancoDeDados.exibirAlimentosTotais();
+        bancoDeDados.consultar(girafa1);
 
 
     }
