@@ -52,6 +52,9 @@ public class BancoDeDados {
                 totalCarnes += animal.getQuantidadeAlimento();
             }
         }
+        System.out.println("Verduras e frutas totais: " + totalAlimentos);
+        System.out.println("Carnes totais: " + totalAlimentos);
+        System.out.println();
         System.out.println("Alimento total usado (Kg): " + totalAlimentos);
     }
 
