@@ -3,6 +3,11 @@ package br.ufrn.imd.visao;
 import br.ufrn.imd.dao.BancoDeDados;
 import br.ufrn.imd.modelo.Girafa;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+
 public class ZooView {
 
     public static void main(String[] args) {
@@ -13,7 +18,9 @@ public class ZooView {
         girafa1.setAlimentacao("Maca");
         girafa1.setAlimentado(true);
         girafa1.setTamanoLingua(10);
-        //girafa1.setDataNascimento();
+        LocalDate data = LocalDate.now();
+        Date date = new Date(1970, 10,03);
+        girafa1.setDataNascimento(date);
         girafa1.comer();
 
         BancoDeDados bancoDeDados = new BancoDeDados();
@@ -21,6 +28,7 @@ public class ZooView {
         bancoDeDados.adionarAnimal(girafa1);
         bancoDeDados.exibirAnimaisCadastrados();
         bancoDeDados.consultar(girafa1);
+        bancoDeDados.exibirAlimentosTotais();
 
 
     }
