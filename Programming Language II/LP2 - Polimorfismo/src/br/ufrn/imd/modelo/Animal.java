@@ -69,11 +69,12 @@ public class Animal {
     }
 
     public void comer() {
-        quantidadeAlimento = peso * (5/100);
+        quantidadeAlimento = peso * (5.0/100);
 
     }
 
-	/*public int calcularIdade(Animal animal) {
+
+    /*public int calcularIdade(Animal animal) {
 
 		return ;
 	}
