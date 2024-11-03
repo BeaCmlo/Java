@@ -17,7 +17,7 @@ public class BancoDeDados {
         animaisCadastrados.add(animal);
     }
     public void exibirAnimaisCadastrados() {
-        System.out.println("");
+        System.out.println();
         System.out.println("Animais Cadastrados");
         System.out.println("*********************************************");
         for (Animal animal : animaisCadastrados) {
@@ -56,6 +56,7 @@ public class BancoDeDados {
         System.out.println("Carnes totais: " + totalAlimentos);
         System.out.println();
         System.out.println("Alimento total usado (Kg): " + totalAlimentos);
+        System.out.println();
     }
 
     public void consultar(Animal animal) {
@@ -63,6 +64,14 @@ public class BancoDeDados {
         System.out.println("Animal " + animal.getNome() + " foi consultado");
 
     }
+
+    public void listarIdade(){
+        for (Animal animal : animaisCadastrados) {
+            System.out.println("Animal " + animal.getNome() + "tem " + animal.getIdade() + " anos");
+        }
+    }
+
+
 }
 
 
