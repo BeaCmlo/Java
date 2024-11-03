@@ -1,6 +1,10 @@
 package br.ufrn.imd.modelo;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
+import java.util.Locale;
 
 public class Animal {
     protected String nome;
@@ -9,7 +13,19 @@ public class Animal {
     protected boolean alimentado;
     protected String alimentacao;
     protected double quantidadeAlimento;
+    protected int idade;
 
+    public void setQuantidadeAlimento(double quantidadeAlimento) {
+        this.quantidadeAlimento = quantidadeAlimento;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
 
     public String getNome() {
         return nome;
@@ -61,7 +77,7 @@ public class Animal {
 
     public Animal() {
         nome = "";
-        //dataNascimento = 00/00/0000;
+        dataNascimento = null;
         peso = 0;
         alimentado = false;
         alimentacao = "";
@@ -69,15 +85,22 @@ public class Animal {
     }
 
     public void comer() {
-        quantidadeAlimento = peso * (5.0/100);
+        quantidadeAlimento = peso * (5.0 / 100);
 
     }
 
 
-    /*public int calcularIdade(Animal animal) {
+    public void calcularIdade() {
 
-		return ;
-	}
-	*/
+        if (dataNascimento == null) {
+            throw new IllegalArgumentException("Data de nascimento não pode ser nula.");
+        }
 
+        LocalDate diaNascimento = dataNascimento.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+        LocalDate hoje = LocalDate.now();
+        idade = Period.between(diaNascimento, hoje).getYears();
+    }
 }
+
