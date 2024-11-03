@@ -21,6 +21,6 @@ public class Elefante extends Animal {
     }
 
     public void comer(){
-        quantidadeAlimento = peso * (15/100);
+        quantidadeAlimento = peso * (15.0/100);
     }
 }
