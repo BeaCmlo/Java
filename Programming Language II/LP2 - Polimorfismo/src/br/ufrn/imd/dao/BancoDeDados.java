@@ -53,11 +53,11 @@ public class BancoDeDados {
             }
         }
         System.out.println("Alimento total usado (Kg): " + totalAlimentos);
-
-
     }
 
     public void consultar(Animal animal) {
+        System.out.println("CONSULTAS");
+        System.out.println("Animal " + animal.getNome() + " foi consultado");
 
     }
 }
