@@ -1,11 +1,12 @@
 package br.ufrn.imd.modelo;
+import br.ufrn.imd.modelo.Animal;
 
-public class Tigre {
+public class Tigre extends Animal {
     private String tipoTigre;
 
 
 
-    public Tigre() {
+    public Tigre () {
         super();
         tipoTigre = "";
     }
@@ -22,10 +23,8 @@ public class Tigre {
         this.tipoTigre = tipoTigre;
     }
 
-
-
+    @Override
     public void comer() {
-
+        quantidadeAlimento = peso * (15.0/100);
     }
-
 }
