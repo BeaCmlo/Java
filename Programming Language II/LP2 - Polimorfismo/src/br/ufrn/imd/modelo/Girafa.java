@@ -21,7 +21,7 @@ public class Girafa extends Animal {
 
 
     public void comer() {
-        quantidadeAlimento = peso * (10/100);
+        quantidadeAlimento = peso * (10.0/100);
     }
 
 }
